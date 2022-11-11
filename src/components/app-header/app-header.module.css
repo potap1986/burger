@@ -1,0 +1,45 @@
+.header {
+
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(50% - 145px);
+  
+}
+
+.button {
+  text-decoration: none;
+  display: flex;
+
+}
+
+.active {
+  color: #FFFFFF;
+}
+
+.logo {
+
+}
+
+.usermenu {
+  flex-basis: calc(50% - 145px);
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+
