@@ -31,6 +31,8 @@
 }
 
 .logo {
+  flex: 0 0 290px;
+  height: 50px;
 
 }
 
