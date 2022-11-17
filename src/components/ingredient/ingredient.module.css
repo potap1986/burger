@@ -2,6 +2,7 @@
 .ingredient {
   text-align: center;
   position: relative;
+  cursor: pointer;
   
 }
 

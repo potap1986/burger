@@ -7,6 +7,8 @@ import {ingredients, currentBurger, burgerCart} from '../../utils/data';
 // import IngredientDetails from '../ingredient-details/ingredient-details';
 import styles from './app.module.css';
 import Modal from '../modal/modal';
+import OrderDetails from '../order-details/order-details';
+import IngredientDetails from '../ingredient-details/ingredient-details';
 
 const initialIngredient = ingredients[0];
 
@@ -15,10 +17,10 @@ function App() {
   const [ingredientVisible, setIngredientVisible] = useState(false);
   const [ingredient, setIngredient] = useState(initialIngredient);
 
-  // const popupCloseHandler = (evt:Event) => {
-  //   evt.preventDefault();
-  //   setPopupVisible(false);
-  // }
+  const popupCloseHandler = (evt:Event) => {
+    evt.preventDefault();
+    setPopupVisible(false);
+  }
 
   const popupOpenHandler = (evt:Event) => {
     evt.preventDefault();
@@ -30,9 +32,9 @@ function App() {
     setIngredientVisible(true);
   };
 
-  // const ingredientHideHandler = () => {
-  //   setIngredientVisible(false);
-  // };
+  const ingredientHideHandler = () => {
+    setIngredientVisible(false);
+  };
 
   return (
     <div className={styles.screen + " pb-10"}>
@@ -49,7 +51,7 @@ function App() {
             onOrder={popupOpenHandler}
           />
         </div>
-        {/* {popupVisible && (
+        {popupVisible && (
           <Modal onClose={popupCloseHandler}>
             <OrderDetails />
           </Modal>
@@ -58,7 +60,7 @@ function App() {
           <Modal onClose={ingredientHideHandler} heading={'Детали ингредиента'}>
             <IngredientDetails item={ingredient}/>
           </Modal>
-        )} */}
+        )}
       </main>
     </div>
   );

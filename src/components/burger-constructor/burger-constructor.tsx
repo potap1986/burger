@@ -49,7 +49,7 @@ const BurgerConstuctor = ({burger , onOrder}) => {
           })}
         </ul>
           
-        <div className={styles.top + ' ml-10 mb-4 pl-4 pr-3'}>
+        <div className={styles.bottom + ' ml-10 mb-4 pl-4 pr-3'}>
           {getItem(burgerArr1[burgerArr1.length - 1], "bottom")}
         </div>
         <div className={styles.summary}>
