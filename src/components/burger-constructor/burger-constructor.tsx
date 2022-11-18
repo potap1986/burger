@@ -2,6 +2,8 @@ import {CurrencyIcon, DeleteIcon, DragIcon, ConstructorElement, Button} from '@y
 import React, {useEffect} from 'react';
 import styles from './burger-constructor.module.css';
 import { ingredients } from '../../utils/data';
+import PropTypes from 'prop-types';
+import { itemPropTypes } from '../../utils/prop-types';
 
 const getItem = (elem, types) => {
 
@@ -26,7 +28,7 @@ const getItem = (elem, types) => {
     )
 }
 
-const BurgerConstuctor = ({burger , onOrder}) => {
+const BurgerConstructor = ({burger , onOrder}) => {
   const burgerArr = [];
   burger.forEach(id => {burgerArr.push(ingredients.find(item => item._id === id))})
   const bun = burgerArr.find(el => el.type === 'bun');
@@ -70,4 +72,9 @@ const BurgerConstuctor = ({burger , onOrder}) => {
   );
 }
 
-export default BurgerConstuctor;
+BurgerConstructor.propTypes = {
+  cart: PropTypes.arrayOf(itemPropTypes).isRequired,
+  onOrder: PropTypes.func.isRequired,
+}
+
+export default BurgerConstructor;
